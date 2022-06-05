@@ -10,41 +10,28 @@ public class OyunEkrani extends JFrame{
    
     public OyunEkrani(String title) throws HeadlessException {
         super(title);
-    }
-    
-    
-    
-    public static void main(String[] args) {
+       
+        setResizable(false);   //framin boyutunu değiştirmeye izin vermez
+        setFocusable(false);  //odağı frame e vermez
         
-        OyunEkrani ekran = new OyunEkrani("Uzay Oyunu");
+        setSize(800,600);
         
-        
-        
-        ekran.setResizable(false);   //framin boyutunu değiştirmeye izin vermez
-        ekran.setFocusable(false);  //odağı frame e vermez
-        
-        ekran.setSize(800,600);
-        
-        ekran.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //frame kapanınca uygulama kapanır
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //frame kapanınca uygulama kapanır
         
         Oyun oyun = new Oyun();
         
-        oyun.requestFocus();   //Odağı panele toplama istediği
+        requestFocus();   //Odağı panele toplama istediği
         
-        oyun.addKeyListener(oyun);  //klavye işlmelerini anlamasini sağlar
+        addKeyListener(oyun);  //klavye işlmelerini anlamasini sağlar
         
-        oyun.setFocusable(true); //odaği panele verir
+        setFocusable(true); //odaği panele verir
         
-        oyun.setFocusTraversalKeysEnabled(false);  // klavye islemleriniin algılanmasi ici n gerekli metod
+        setFocusTraversalKeysEnabled(false);  // klavye islemleriniin algılanmasi ici n gerekli metod
         
-        ekran.add(oyun); //ekrana frame oyunu ekledik paneli ekledik.
+        add(oyun); //ekrana frame oyunu ekledik paneli ekledik.
         
-        ekran.setVisible(true);//ekrani gorunur kıl
-        
-       
-        
+        setVisible(true);//ekrani gorunur kıl
     }
     
-   
     
 }
