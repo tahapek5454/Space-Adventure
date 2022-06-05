@@ -14,4 +14,6 @@ A simple experiment to design game. The aim is to shoot the spaceship moving in 
 + Oyun
   + The part with the codes related to the content of the game   
 
+## Image
+![space-travel](https://github.com/tahapek5454/Space-Adventure/blob/main/uzayOyunu.png)
 
